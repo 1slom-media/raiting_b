@@ -7,6 +7,7 @@ insert into users (companyname,inn,email,ogrn,kpp,country,password,repeat_passwo
 
 const GETUSERS = `
     select
+        user_id,
         companyname,
         inn,
         email,

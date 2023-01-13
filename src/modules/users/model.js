@@ -4,7 +4,7 @@ import { LOGIN,REGISTER,GETUSERS } from './query.js'
 const GET =  async ({userId=0}) => {
     try {
       return await fetchAll(GETUSERS, [userId])
-  
+      
     } catch (error) {
       console.log(error);
     }

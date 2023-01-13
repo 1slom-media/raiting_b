@@ -1,6 +1,20 @@
 import model from './model.js'
 import jwt from '../../lib/jwt.js'
 import { AuthorizationError, ValidationError } from '../../utils/errors.js'
+import { fetchAll } from '../../lib/postgres.js'
+
+const allUsers = await fetchAll(`
+ select
+    user_id,
+    companyname,
+    inn,
+    email,
+    ogrn,
+    kpp,
+    country
+from users as u
+where  case when $1 > 0 then u.user_id = $1 else true end
+order by u.user_id`,[0])
 
 const GET = async (req, res) => {
     try {
@@ -13,7 +27,7 @@ const GET = async (req, res) => {
 
 const LOGIN = async (req, res,next) => {
     try {
-        const user = await model.LOGINMODEL(req.body)
+        const user = await model.LOGINMODEL(req.body) 
         if(user) {
             res.status(200).json({
               status: 200,
@@ -37,8 +51,14 @@ const LOGIN = async (req, res,next) => {
 const REGISTER=async (req,res,next)=>{
     try {
         const user = await model.REGISTERMODEL(req.body)
-        console.log(user);
-        if(user) {
+        let newUser;
+        allUsers.filter(use=>{
+            if(use.companyname !== user.companyname){
+                return newUser = true
+            }
+            return newUser = false
+        })
+        if(newUser) {
             res.status(201).json({
               status: 201,
               message: "ok",
@@ -49,7 +69,7 @@ const REGISTER=async (req,res,next)=>{
         }else{
             res.status(401).json({
               status: 401,
-              message: "Please fill the form correctly",
+              message: "Already exists",
               token: null,
             });
         }
