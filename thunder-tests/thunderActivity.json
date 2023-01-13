@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "9cf32d61-acee-48f7-a442-eb5f854139dc",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/users",
+    "url": "http://localhost:8000/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-13T11:37:35.488Z",
+    "modified": "2023-01-13T11:37:35.488Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "fcd786a1-1529-4b7e-a4bb-58f8eff3ba2e",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/register",
+    "url": "http://localhost:8000/register",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-13T11:40:16.289Z",
+    "modified": "2023-01-13T11:40:16.289Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"companyname\":\"anorbank\",\n  \"inn\":\"asdfg\",\n  \"email\":\"sdfg\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"password\":\"12345\",\n  \"repeat_password\":\"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "91715d8d-a82c-442d-bec2-29e6065d1600",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/login",
+    "url": "http://localhost:8000/login",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-13T11:45:10.483Z",
+    "modified": "2023-01-13T11:45:10.483Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"sdfg\",\n  \"password\":\"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
