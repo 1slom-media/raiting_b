@@ -22,7 +22,7 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-01-13T11:40:16.289Z",
-    "modified": "2023-01-13T13:22:28.266Z",
+    "modified": "2023-01-14T10:30:22.350Z",
     "headers": [],
     "params": [],
     "body": {
@@ -47,6 +47,25 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"email\":\"sdfg\",\n  \"password\":\"12345\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cee211a9-9301-4cb4-a645-b797d74cf5e6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/analitika",
+    "url": "http://localhost:8000/analitika/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-14T09:59:43.497Z",
+    "modified": "2023-01-14T10:29:45.224Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uzuzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\",\n  \"data_date\":\"dattttttaaaa\"\n}",
       "form": []
     },
     "tests": []

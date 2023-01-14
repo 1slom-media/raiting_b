@@ -1,3 +1,4 @@
 import users from './users/router.js';
+import analitika from './analitika/router.js';
 
-export default [users];
+export default [users,analitika];
