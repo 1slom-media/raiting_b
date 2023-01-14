@@ -1,5 +1,5 @@
 import {fetch,fetchAll } from '../../lib/postgres.js'
-import { LOGIN,REGISTER,GETUSERS } from './query.js'
+import { LOGIN,REGISTER,GETUSERS,COMPANYNAME } from './query.js'
 
 const GET =  async ({userId=0}) => {
     try {
@@ -20,7 +20,11 @@ const LOGINMODEL = async ({email, password}) => {
 
 const REGISTERMODEL=async ({companyname,inn,email,ogrn,kpp,country,password,repeat_password})=>{
     try {
-        return await fetch(REGISTER, [companyname,inn,email,ogrn,kpp,country,password,repeat_password]);
+        const allUsers = await fetch(COMPANYNAME,[companyname])
+        if(!allUsers){
+            return await fetch(REGISTER, [companyname,inn,email,ogrn,kpp,country,password,repeat_password]);
+        }
+        
     } catch (error) {
         console.error(error.message);
     }
