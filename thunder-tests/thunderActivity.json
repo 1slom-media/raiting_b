@@ -56,16 +56,320 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/analitika",
-    "url": "http://localhost:8000/analitika/1",
-    "method": "DELETE",
+    "url": "http://localhost:8000/analitika",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-01-14T09:59:43.497Z",
-    "modified": "2023-01-14T10:29:45.224Z",
+    "modified": "2023-01-14T15:08:28.846Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title_uz\":\"title uzuzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\",\n  \"data_date\":\"dattttttaaaa\"\n}",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uzuzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\",\n  \"data_date\":\"dattttttaaaa\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ca92d4a2-6dab-40bd-8c82-82ee140931b1",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy",
+    "url": "http://localhost:8000/uslugiy",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-14T13:35:47.471Z",
+    "modified": "2023-01-14T13:35:47.471Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "036d30e2-15c5-418d-be9e-8ef0751a1e9c",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy",
+    "url": "http://localhost:8000/uslugiy",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-14T13:36:44.445Z",
+    "modified": "2023-01-14T13:36:44.445Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uzmasmandbgevdyevfeyvfy4f\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "5cd8a4d4-57eb-47b2-bf60-eef2dc51738a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy/1",
+    "url": "http://localhost:8000/uslugiy/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-14T13:36:50.074Z",
+    "modified": "2023-01-14T13:36:50.074Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uzmasmandbgevdyevfeyvfy4f\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ecd744ee-6f4d-499f-b3cd-73d1feedb495",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy/1",
+    "url": "http://localhost:8000/uslugiy/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-14T13:37:23.846Z",
+    "modified": "2023-01-14T13:37:23.846Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uzmasmandbgevdyevfeyvfy4f\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "3b079c18-8b7e-4a39-994f-0003355d602d",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy",
+    "url": "http://localhost:8000/uslugiy",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-14T13:37:28.458Z",
+    "modified": "2023-01-14T13:37:28.458Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uzmasmandbgevdyevfeyvfy4f\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8acd9cc6-1156-49c6-b0a4-32c557fe38e6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/uslugiy/1",
+    "url": "http://localhost:8000/uslugiy/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-14T13:38:00.658Z",
+    "modified": "2023-01-14T13:38:00.658Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uzmasmandbgevdyevfeyvfy4f\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"img\":\"images\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a13d290d-2074-43fa-a3d1-c2f3df9bb9c6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/infarmatsia",
+    "url": "http://localhost:8000/infarmatsia",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-14T14:49:38.194Z",
+    "modified": "2023-01-14T14:51:14.364Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b21d23b2-844e-4b52-bf54-2100de92a262",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/infarmatsia",
+    "url": "http://localhost:8000/infarmatsia",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-14T14:50:23.153Z",
+    "modified": "2023-01-14T14:50:23.153Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c9285dfb-ff71-4d11-b194-604af9e16977",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/infarmatsia/2",
+    "url": "http://localhost:8000/infarmatsia/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-14T14:51:45.014Z",
+    "modified": "2023-01-14T14:51:45.014Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cfb708d4-1fac-4d38-b196-fe8c25d7d2b9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/infarmatsia/1",
+    "url": "http://localhost:8000/infarmatsia/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-14T14:52:06.549Z",
+    "modified": "2023-01-14T14:52:06.549Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uzsdfghjk\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uzdfghjkl\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des rusdfghjk,dfghjklcvbn\",\n  \"pdf\":\"pdf\",\n  \"size\":\"15.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "77021ef7-6def-45e1-a3b1-2241c5fccb7b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/infarmatsia/1",
+    "url": "http://localhost:8000/infarmatsia/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-14T14:53:44.007Z",
+    "modified": "2023-01-14T14:53:44.007Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"title uzsdfghjk\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uzdfghjkl\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des rusdfghjk,dfghjklcvbn\",\n  \"pdf\":\"pdf\",\n  \"size\":\"15.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "fb177e7f-0851-4104-ac87-df9e75412009",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/metadalogia",
+    "url": "http://localhost:8000/metadalogia",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-14T15:30:47.989Z",
+    "modified": "2023-01-14T15:30:47.989Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"namename\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "12a0cd9c-bc77-4397-8e55-eb1f186676c9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/metadalogia",
+    "url": "http://localhost:8000/metadalogia",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-14T15:31:32.039Z",
+    "modified": "2023-01-14T15:31:32.039Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"namename\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "6f5fedc7-d13e-4e31-bea1-bf38bc52d7dc",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/metadalogia/1",
+    "url": "http://localhost:8000/metadalogia/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-14T15:31:59.865Z",
+    "modified": "2023-01-14T15:31:59.865Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"o`zgardi\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b3f95e12-229f-42c1-9deb-9d77545f905d",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/metadalogia/1",
+    "url": "http://localhost:8000/metadalogia/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-14T15:32:18.860Z",
+    "modified": "2023-01-14T15:32:18.860Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"o`zgardi\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0e0d1a2d-886d-423e-9cb6-f46bf7e01452",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/renkingi",
+    "url": "http://localhost:8000/renkingi",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-14T15:44:29.012Z",
+    "modified": "2023-01-14T15:44:29.012Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"o`zgardi\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
       "form": []
     },
     "tests": []

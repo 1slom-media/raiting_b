@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS users(
 
 CREATE TABLE IF NOT EXISTS analitika(
     id serial primary key,
+    category_name varchar(100) not null,
     title_uz varchar not null,
     title_en varchar not null,
     title_ru varchar not null,
@@ -27,3 +28,48 @@ CREATE TABLE IF NOT EXISTS analitika(
     data_date varchar(100) not null,
     date timestamp default current_timestamp
 );
+
+CREATE TABLE IF NOT EXISTS uslugiy(
+    id serial primary key,
+    title_uz varchar not null,
+    title_en varchar not null,
+    title_ru varchar not null,
+    description_uz text not null,
+    description_en text not null,
+    description_ru text not null,
+    img text not null,
+    date timestamp default current_timestamp
+);
+
+CREATE TABLE IF NOT EXISTS infarmatsia(
+    id serial primary key,
+    title_uz varchar not null,
+    title_en varchar not null,
+    title_ru varchar not null,
+    pdf text not null,
+    size varchar(50) not null,
+    date timestamp default current_timestamp
+);
+
+CREATE TABLE IF NOT EXISTS metadalogia(
+    id serial primary key,
+    category_name varchar(100) not null,
+    title_uz varchar not null,
+    title_en varchar not null,
+    title_ru varchar not null,
+    pdf text not null,
+    size varchar(50) not null,
+    date timestamp default current_timestamp
+);
+
+CREATE TABLE IF NOT EXISTS renkingi(
+    id serial primary key,
+    category_name varchar(100) not null,
+    title_uz varchar not null,
+    title_en varchar not null,
+    title_ru varchar not null,
+    pdf text not null,
+    size varchar(50) not null,
+    date timestamp default current_timestamp
+);
+

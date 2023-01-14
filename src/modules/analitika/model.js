@@ -15,17 +15,17 @@ const GET = async ({analitikaId=0}) => {
     }
 };
 
-const POST = async ({ title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
+const POST = async ({category_name, title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
     try {
-      return await fetch(POSTANALITIKA, [ title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
+      return await fetch(POSTANALITIKA, [ category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({analitikaId},{title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
+const PUT = async ({analitikaId},{category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
     try {
-      return await fetch(PUTANALITIKA, [analitikaId,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
+      return await fetch(PUTANALITIKA, [analitikaId,category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
     } catch (error) {
         console.log(error);
     }
