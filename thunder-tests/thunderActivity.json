@@ -373,5 +373,441 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "e179dec8-57c7-4e91-9608-edac12cd3261",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/news",
+    "url": "http://localhost:8000/news/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-17T16:24:46.687Z",
+    "modified": "2023-01-17T16:27:37.941Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description_uz\":\"description\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"data_date\":\"2023-2024\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "69311892-206e-47f4-add5-f41fa5a29d68",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/press-center",
+    "url": "http://localhost:8000/press-center",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T16:34:33.124Z",
+    "modified": "2023-01-17T16:41:37.844Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description_uz\":\"description\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"data_date\":\"2023-2024\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e9266ddd-4e7e-4e0d-8399-13498bfaf296",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/press-center",
+    "url": "http://localhost:8000/press-center",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-17T16:40:23.817Z",
+    "modified": "2023-01-17T16:40:23.817Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description_uz\":\"description\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"data_date\":\"2023-2024\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "edfdacc3-d914-40a2-ae57-f967f5b6e768",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/press-center/1",
+    "url": "http://localhost:8000/press-center/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-17T16:42:12.406Z",
+    "modified": "2023-01-17T16:42:12.406Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description_uz\":\"o`zgardi\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"data_date\":\"2023-2024\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d0b03158-cefa-4b8d-b3e7-3e7f302d2cff",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/press-center/1",
+    "url": "http://localhost:8000/press-center/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-17T16:43:49.947Z",
+    "modified": "2023-01-17T16:43:49.947Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description_uz\":\"o`zgardi\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"data_date\":\"2023-2024\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "2b36ae8a-d0d8-4183-9fa1-bbcc2ca6c419",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/vopros",
+    "url": "http://localhost:8000/vopros",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T22:36:18.313Z",
+    "modified": "2023-01-17T22:39:31.598Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e7ed9029-7852-4edc-9a9a-72550e0e9710",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/vopros",
+    "url": "http://localhost:8000/vopros",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-17T22:36:58.144Z",
+    "modified": "2023-01-17T22:36:58.144Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uzuzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "07f3c62e-8472-473e-b42e-828f3f9574a9",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/vopros/1",
+    "url": "http://localhost:8000/vopros/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-17T22:39:01.372Z",
+    "modified": "2023-01-17T22:39:01.372Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e23dd339-7866-4999-a5bd-4fbd65133c4b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/vopros/1",
+    "url": "http://localhost:8000/vopros/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-17T22:39:56.217Z",
+    "modified": "2023-01-17T22:39:56.217Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4cbe9cd7-34b0-4ed8-81ea-1a98ba413002",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/vopros/1",
+    "url": "http://localhost:8000/vopros/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T22:40:24.471Z",
+    "modified": "2023-01-17T22:40:24.471Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_name\":\"vse\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "04aa1a19-cf18-4eae-a590-289d46039098",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/categories",
+    "url": "http://localhost:8000/categories",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T22:51:58.581Z",
+    "modified": "2023-01-17T22:53:15.645Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"uz\",\n  \"title_en\":\"en\",\n  \"title_ru\":\"ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "963de95d-69a9-4996-a531-a73b6761d3a8",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/categories",
+    "url": "http://localhost:8000/categories",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T22:52:46.449Z",
+    "modified": "2023-01-17T23:19:52.044Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"premium\",\n  \"title_en\":\"en\",\n  \"title_ru\":\"ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b3c1eee4-936b-436a-969f-3f486b22cd0b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/categories/1",
+    "url": "http://localhost:8000/categories/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-17T22:54:04.468Z",
+    "modified": "2023-01-17T22:54:04.468Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"uzuzuzuz\",\n  \"title_en\":\"en\",\n  \"title_ru\":\"ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "51ae700e-df58-49b0-a411-5be6b433c706",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/categories/1",
+    "url": "http://localhost:8000/categories/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-01-17T22:54:37.103Z",
+    "modified": "2023-01-17T22:54:37.103Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title_uz\":\"uzuzuzuz\",\n  \"title_en\":\"en\",\n  \"title_ru\":\"ru\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cd40e459-1452-4b53-9490-73b3fe26f27c",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks",
+    "url": "http://localhost:8000/banks",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-17T23:17:51.844Z",
+    "modified": "2023-01-17T23:25:10.690Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"hamkorbank\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "b34a94b5-dccc-4a48-a7e2-4afdab565fdf",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks/1",
+    "url": "http://localhost:8000/banks/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-01-17T23:21:07.911Z",
+    "modified": "2023-01-17T23:21:07.911Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a8bfc83e-9615-4016-8983-face5145ec87",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks",
+    "url": "http://localhost:8000/banks",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:22:16.932Z",
+    "modified": "2023-01-17T23:22:16.932Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "30c164ef-1993-4c07-bd2a-430e1d7747e5",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks/2",
+    "url": "http://localhost:8000/banks/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:22:55.050Z",
+    "modified": "2023-01-17T23:22:55.050Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "1558b564-0cea-4196-9ce9-449e87828df1",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks/1",
+    "url": "http://localhost:8000/banks/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:22:56.842Z",
+    "modified": "2023-01-17T23:22:56.842Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "c4c543e8-0464-4fbb-bbc9-44908ac2d7a8",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks?search=media",
+    "url": "http://localhost:8000/banks?search=media",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:23:38.494Z",
+    "modified": "2023-01-17T23:23:38.494Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "search",
+        "value": "media",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f623dc91-f319-4dab-bc5d-10f5f7dca154",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks?search=mediaa",
+    "url": "http://localhost:8000/banks?search=mediaa",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:23:43.033Z",
+    "modified": "2023-01-17T23:23:43.033Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "search",
+        "value": "mediaa",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"media\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "d613cbe4-fe71-4e95-8680-5b364bb9ccc1",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/banks?search=hamkorbank",
+    "url": "http://localhost:8000/banks?search=hamkorbank",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-17T23:24:39.525Z",
+    "modified": "2023-01-17T23:25:31.304Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "search",
+        "value": "hamkorbank",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"hamkorbank\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
