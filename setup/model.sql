@@ -73,8 +73,16 @@ CREATE TABLE IF NOT EXISTS renkingi(
     date timestamp default current_timestamp
 );
 
+ALTER TABLE renkingi 
+DROP COLUMN pdf;
+ALTER TABLE renkingi 
+DROP COLUMN size;
+
+
 ALTER TABLE renkingi
 ADD COLUMN link text;
+ALTER TABLE renkingi
+ADD COLUMN data_date varchar(100);
 
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,

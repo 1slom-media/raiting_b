@@ -9,10 +9,10 @@ const GETRENK = `
 const POSTRENK =`
 insert into
     renkingi(
-        category_name,title_uz,title_en,title_ru,pdf,size,link
+        category_name,title_uz,title_en,title_ru,link,data_date
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7) returning *
+    ($1,$2,$3,$4,$5,$6) returning *
 `;
 
 const PUTRENK= `
@@ -23,9 +23,8 @@ const PUTRENK= `
             title_uz,
             title_en,
             title_ru,
-            pdf,
-            size,
-            link
+            link,
+            data_date
         from renkingi
         where id = $1    
     ) update renkingi as r
@@ -50,20 +49,15 @@ const PUTRENK= `
                     when length($5) > 1 then $5
                     else o.title_ru
                 end,
-        pdf = 
-                case 
-                    when length($6) > 1 then $6
-                    else o.pdf
-                end,
-        size = 
-                case 
-                    when length($7) > 1 then $7
-                    else o.size
-                end,
         link = 
                 case 
-                    when length($8) > 1 then $8
+                    when length($6) > 1 then $6
                     else o.link
+                end,
+        data_date = 
+                case 
+                    when length($7) > 1 then $7
+                    else o.data_date
                 end
     from old_renkingi as o   
     where r.id = $1
