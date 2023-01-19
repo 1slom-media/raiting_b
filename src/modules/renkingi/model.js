@@ -15,17 +15,17 @@ const GET = async ({renkId=0}) => {
     }
 };
 
-const POST = async ({category_name, title_uz,title_en,title_ru,pdf,size}) => {
+const POST = async ({category_name, title_uz,title_en,title_ru,pdf,size,link}) => {
     try {
-      return await fetch(POSTRENK, [category_name, title_uz,title_en,title_ru,pdf,size]);
+      return await fetch(POSTRENK, [category_name, title_uz,title_en,title_ru,pdf,size,link]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({renkId},{category_name,title_uz,title_en,title_ru,pdf,size}) => {
+const PUT = async ({renkId},{category_name,title_uz,title_en,title_ru,pdf,size,link}) => {
     try {
-      return await fetch(PUTRENK, [renkId,category_name,title_uz,title_en,title_ru,pdf,size]);
+      return await fetch(PUTRENK, [renkId,category_name,title_uz,title_en,title_ru,pdf,size,link]);
     } catch (error) {
         console.log(error);
     }

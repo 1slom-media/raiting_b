@@ -15,17 +15,17 @@ const GET = async ({bankId=0},{search}) => {
     }
 };
 
-const POST = async ({category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date}) => {
+const POST = async ({category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images}) => {
     try {
-      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date]);
+      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images]);
     } catch (error) {
         console.log(error);
     } 
 }; 
 
-const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date}) => {
+const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images}) => {
     try {
-      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date]);
+      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images]);
     } catch (error) {
         console.log(error); 
     }

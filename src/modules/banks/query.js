@@ -7,8 +7,8 @@ const GETBANKS = `
 `;
 
 const POSTBANKS =`
-insert into banks (category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date)
-values ($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *
+insert into banks (category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images)
+values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning *
 `;
 
 
@@ -24,7 +24,8 @@ const PUTBANKS = `
             country,
             raiting,
             prognoz,
-            update_date
+            update_date,
+            images
         from banks
         where bank_id = $1    
     ) update banks as b
@@ -73,6 +74,11 @@ const PUTBANKS = `
                 case 
                     when length($10) > 1 then $10
                     else o.update_date
+                end,
+                images = 
+                case 
+                    when length($10) > 1 then $10
+                    else o.images
                 end
     from old_banks as o   
     where b.bank_id = $1

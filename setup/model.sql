@@ -73,6 +73,9 @@ CREATE TABLE IF NOT EXISTS renkingi(
     date timestamp default current_timestamp
 );
 
+ALTER TABLE renkingi
+ADD COLUMN link text;
+
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,
     description_uz text not null,
@@ -124,5 +127,8 @@ CREATE TABLE IF NOT EXISTS banks(
     update_date varchar(100) not null,
     date timestamp default current_timestamp
 );
+
+ALTER TABLE banks
+ADD COLUMN images text;
 
 
