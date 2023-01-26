@@ -77,12 +77,34 @@ ALTER TABLE renkingi
 DROP COLUMN pdf;
 ALTER TABLE renkingi 
 DROP COLUMN size;
+ALTER TABLE renkingi 
+DROP COLUMN link;
+
+ALTER TABLE renkingi
+ADD COLUMN inn varchar(200);
+ALTER TABLE renkingi
+ADD COLUMN ogrn varchar(80);
+ALTER TABLE renkingi
+ADD COLUMN kpp varchar(100) ;
+ALTER TABLE renkingi
+ADD COLUMN country varchar(60);
 
 
 ALTER TABLE renkingi
 ADD COLUMN link text;
 ALTER TABLE renkingi
 ADD COLUMN data_date varchar(100);
+
+CREATE TABLE IF NOT EXISTS about_renking(
+    id serial primary key,
+    renking_id int references renkingi(id) not null,
+    raiting varchar(100) not null,
+    kvartal varchar (300) not null,
+    atribut varchar(100) not null,
+    god varchar(100) not null,
+    sum varchar(100) not null,
+    date timestamp default current_timestamp
+);
 
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,
@@ -130,13 +152,27 @@ CREATE TABLE IF NOT EXISTS banks(
     ogrn varchar(80) not null,
     kpp varchar(100)  not null, 
     country varchar(60) not null,
+    date timestamp default current_timestamp
+);
+
+ALTER TABLE banks
+DROP COLUMN raiting;
+ALTER TABLE banks
+DROP COLUMN prognoz;
+ALTER TABLE banks
+DROP COLUMN update_date;
+
+ALTER TABLE banks
+ADD COLUMN images text;
+
+CREATE TABLE IF NOT EXISTS raiting(
+    id serial primary key,
+    bank_id int references banks(bank_id) not null,
     raiting varchar(100) not null,
     prognoz varchar (300) not null,
     update_date varchar(100) not null,
     date timestamp default current_timestamp
 );
 
-ALTER TABLE banks
-ADD COLUMN images text;
 
 

@@ -1,18 +1,21 @@
 const GETRENK = `
     select
-        r.*
+        r.*,
+        json_agg(a.*) as about_renking
     from renkingi as r
+    left join about_renking as a on a.renking_id = r.id
     where case when $1 > 0 then r.id = $1 else true end
+    group by r.id
     order by r.id
 `;
 
 const POSTRENK =`
 insert into
     renkingi(
-        category_name,title_uz,title_en,title_ru,link,data_date
+        category_name,title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country
     )
 values
-    ($1,$2,$3,$4,$5,$6) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *
 `;
 
 const PUTRENK= `
@@ -23,8 +26,11 @@ const PUTRENK= `
             title_uz,
             title_en,
             title_ru,
-            link,
-            data_date
+            data_date,
+            inn,
+            ogrn,
+            kpp,
+            country
         from renkingi
         where id = $1    
     ) update renkingi as r
@@ -49,15 +55,30 @@ const PUTRENK= `
                     when length($5) > 1 then $5
                     else o.title_ru
                 end,
-        link = 
-                case 
-                    when length($6) > 1 then $6
-                    else o.link
-                end,
         data_date = 
                 case 
-                    when length($7) > 1 then $7
+                    when length($6) > 1 then $6
                     else o.data_date
+                end,
+        inn = 
+                case 
+                    when length($7) > 1 then $7
+                    else o.inn
+                end,
+        ogrn = 
+                case 
+                    when length($8) > 1 then $8
+                    else o.ogrn
+                end,
+        kpp = 
+                case 
+                    when length($9) > 1 then $9
+                    else o.kpp
+                end,
+        country = 
+                case 
+                    when length($10) > 1 then $10
+                    else o.country
                 end
     from old_renkingi as o   
     where r.id = $1

@@ -361,15 +361,15 @@
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
     "url": "http://localhost:8000/renkingi",
-    "method": "POST",
+    "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-01-14T15:44:29.012Z",
+    "modified": "2023-01-26T09:03:56.418Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"category_name\":\"o`zgardi\",\n  \"title_uz\":\"title uz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"description_uz\":\"des uz\",\n  \"description_en\":\"des en\",\n  \"description_ru\":\"des ru\",\n  \"pdf\":\"pdf\",\n  \"size\":\"12.kb\"\n}",
+      "raw": "{\n  \"category_name\":\"til1\",\n  \"title_uz\":\"title uzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"link\":\"https://nimadir\",\n  \"data_date\":\"25.01.23\",\n  \"inn\": \"dfgh\",\n  \"ogrn\": \"dfgh\",\n  \"kpp\": \"fghj\",\n  \"country\":\"sdfghj\"\n}",
       "form": []
     },
     "tests": []
@@ -721,11 +721,11 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/banks/1",
-    "url": "http://localhost:8000/banks/1",
+    "url": "http://localhost:8000/banks",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-17T23:22:56.842Z",
-    "modified": "2023-01-17T23:22:56.842Z",
+    "modified": "2023-01-26T08:07:00.232Z",
     "headers": [],
     "params": [],
     "body": {
@@ -790,22 +790,54 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/banks?search=hamkorbank",
-    "url": "http://localhost:8000/banks?search=hamkorbank",
+    "url": "http://localhost:8000/banks",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-17T23:24:39.525Z",
-    "modified": "2023-01-17T23:25:31.304Z",
+    "modified": "2023-01-26T08:23:37.657Z",
     "headers": [],
-    "params": [
-      {
-        "name": "search",
-        "value": "hamkorbank",
-        "isPath": false
-      }
-    ],
+    "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"hamkorbank\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"raiting\":\"+b\",\n  \"prognoz\":\"stabil\",\n  \"update_date\":\"18.01.23 4:17\"\n}",
+      "raw": "{\n  \"category_id\":2,\n  \"companyname\":\"hamkorbank\",\n  \"inn\":\"inn o`zgardi\",\n  \"ogrn\":\"dfghj\",\n  \"kpp\":\"dfgh\",\n  \"country\":\"uzbekistan\",\n  \"images\":\"sdfghjk\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4b7da27a-d001-40f0-902e-d7e42e7ca629",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/raiting",
+    "url": "http://localhost:8000/raiting",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-26T08:22:47.441Z",
+    "modified": "2023-01-26T08:22:47.441Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghj\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"2023\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "42b4aae7-0e6d-4502-88d7-4f6ba3ee7ac7",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:8000/about",
+    "url": "http://localhost:8000/about",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-26T09:03:25.275Z",
+    "modified": "2023-01-26T09:03:25.275Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjk\",\n  \"kvartal\":\"dfghjk\",\n  \"atribut\":\"dfghj\",\n  \"god\":\"2023\",\n  \"sum\":\"ghjk\"\n}",
       "form": []
     },
     "tests": []

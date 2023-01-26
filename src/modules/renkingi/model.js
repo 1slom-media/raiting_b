@@ -9,23 +9,27 @@ import {
 
 const GET = async ({renkId=0}) => {
     try {
-        return await fetchAll(GETRENK, [renkId])
+        const renkingi = await fetchAll(GETRENK, [renkId])
+        return renkingi?.map(renking => {
+            renking.about_renking = renking.about_renking[0] == null ? [] : renking.about_renking
+            return renking
+        })
     } catch (error) {
         console.log(error);
     }
 };
 
-const POST = async ({category_name, title_uz,title_en,title_ru,link,data_date}) => {
+const POST = async ({category_name, title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country}) => {
     try {
-      return await fetch(POSTRENK, [category_name, title_uz,title_en,title_ru,link,data_date]);
+      return await fetch(POSTRENK, [category_name, title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({renkId},{category_name,title_uz,title_en,title_ru,link,data_date}) => {
+const PUT = async ({renkId},{category_name,title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country}) => {
     try {
-      return await fetch(PUTRENK, [renkId,category_name,title_uz,title_en,title_ru,link,data_date]);
+      return await fetch(PUTRENK, [renkId,category_name,title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country]);
     } catch (error) {
         console.log(error);
     }

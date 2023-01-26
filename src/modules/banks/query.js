@@ -1,14 +1,17 @@
 const GETBANKS = `
     select
-        b.*
+        b.*,
+        json_agg(r.*) as raiting
     from banks as b
+    left join raiting as r on r.bank_id = b.bank_id
     where (companyname ilike concat('%', $2::varchar, '%')) and case when $1 > 0 then b.bank_id = $1 else true end
+    group by b.bank_id
     order by b.bank_id 
 `;
 
 const POSTBANKS =`
-insert into banks (category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images)
-values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning *
+insert into banks (category_id,companyname,inn,ogrn,kpp,country,images)
+values ($1,$2,$3,$4,$5,$6,$7) returning *
 `;
 
 
@@ -22,9 +25,6 @@ const PUTBANKS = `
             ogrn,
             kpp,
             country,
-            raiting,
-            prognoz,
-            update_date,
             images
         from banks
         where bank_id = $1    
@@ -60,24 +60,9 @@ const PUTBANKS = `
                     when length($7) > 1 then $7
                     else o.country
                 end,
-                raiting = 
-                case 
-                    when length($8) > 1 then $8
-                    else o.raiting
-                end,
-                prognoz = 
-                case 
-                    when length($9) > 1 then $9
-                    else o.prognoz
-                end,
-                update_date = 
-                case 
-                    when length($10) > 1 then $10
-                    else o.update_date
-                end,
                 images = 
                 case 
-                    when length($10) > 1 then $10
+                    when length($8) > 1 then $8
                     else o.images
                 end
     from old_banks as o   

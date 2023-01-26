@@ -9,23 +9,29 @@ import {
 
 const GET = async ({bankId=0},{search}) => {
     try {
-        return await fetchAll(GETBANKS, [bankId,search])
+        const banks = await fetchAll(GETBANKS, [bankId,search])
+
+        return banks?.map(bank => {
+            bank.raiting = bank.raiting[0] == null ? [] : bank.raiting
+            return bank
+        })
+
     } catch (error) {
         console.log(error)
     }
 };
 
-const POST = async ({category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images}) => {
+const POST = async ({category_id,companyname,inn,ogrn,kpp,country,images}) => {
     try {
-      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images]);
+      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country,images]);
     } catch (error) {
         console.log(error);
     } 
 }; 
 
-const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images}) => {
+const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country,images}) => {
     try {
-      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country,raiting,prognoz,update_date,images]);
+      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country,images]);
     } catch (error) {
         console.log(error); 
     }
