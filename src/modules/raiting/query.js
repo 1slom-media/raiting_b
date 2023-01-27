@@ -29,7 +29,7 @@ const PUTRAITING= `
         set
         bank_id = 
                 case 
-                    when length $2 > 0 then $2
+                    when  $2 > 0 then $2
                     else o.bank_id
                 end,
         raiting = 

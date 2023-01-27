@@ -809,16 +809,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/raiting",
-    "url": "http://localhost:8000/raiting",
-    "method": "POST",
+    "url": "http://localhost:8000/raiting/1",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2023-01-26T08:22:47.441Z",
-    "modified": "2023-01-26T08:22:47.441Z",
+    "modified": "2023-01-27T13:56:21.055Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghj\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"2023\"\n}",
+      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghj\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\"\n}",
       "form": []
     },
     "tests": []
