@@ -809,16 +809,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/raiting",
-    "url": "http://localhost:8000/raiting/1",
+    "url": "https://apifake.supersiteuz.com/raiting/1",
     "method": "PUT",
     "sortNum": 0,
     "created": "2023-01-26T08:22:47.441Z",
-    "modified": "2023-01-27T13:56:21.055Z",
+    "modified": "2023-01-27T14:11:38.071Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghj\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\"\n}",
+      "raw": "{\n  \"bank_id\":4,\n  \"raiting\":\"dfghjsdfgbhnjm,\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\"\n}",
       "form": []
     },
     "tests": []
@@ -829,10 +829,10 @@
     "containerId": "",
     "name": "http://localhost:8000/about",
     "url": "http://localhost:8000/about",
-    "method": "POST",
+    "method": "GET",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-01-26T09:03:25.275Z",
+    "modified": "2023-01-28T06:41:32.692Z",
     "headers": [],
     "params": [],
     "body": {

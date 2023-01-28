@@ -2,7 +2,7 @@ const GETABOUT = `
     select
         a.*
     from about_renking as a
-    where case when $1 > 0 then r.id = $1 else true end
+    where case when $1 > 0 then a.id = $1 else true end
     order by a.id
 `;
 
