@@ -31,7 +31,7 @@ const PUTABOUT= `
         set
         renking_id = 
                 case 
-                    when length $2 > 0 then $2
+                    when  $2 > 0 then $2
                     else o.renking_id
                 end,
         raiting = 

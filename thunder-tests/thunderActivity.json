@@ -828,16 +828,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/about",
-    "url": "http://localhost:8000/about",
-    "method": "GET",
+    "url": "http://localhost:8000/about/1",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-01-28T06:41:32.692Z",
+    "modified": "2023-01-30T14:34:42.823Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjk\",\n  \"kvartal\":\"dfghjk\",\n  \"atribut\":\"dfghj\",\n  \"god\":\"2023\",\n  \"sum\":\"ghjk\"\n}",
+      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"dfghjk\",\n  \"atribut\":\"dfghj\",\n  \"god\":\"2023\",\n  \"sum\":\"ghjk\"\n}",
       "form": []
     },
     "tests": []
