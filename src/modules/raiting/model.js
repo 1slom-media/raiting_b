@@ -15,17 +15,17 @@ const GET = async ({raitingId=0}) => {
     }
 };
 
-const POST = async ({bank_id,raiting,prognoz,update_date}) => {
+const POST = async ({bank_id,raiting,prognoz,update_date,sertifikat}) => {
     try {
-      return await fetch(POSTRAITING, [ bank_id,raiting,prognoz,update_date]);
+      return await fetch(POSTRAITING, [ bank_id,raiting,prognoz,update_date,sertifikat]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({raitingId},{bank_id,raiting,prognoz,update_date}) => {
+const PUT = async ({raitingId},{bank_id,raiting,prognoz,update_date,sertifikat}) => {
     try {
-      return await fetch(PUTRAITING, [raitingId,bank_id,raiting,prognoz,update_date]);
+      return await fetch(PUTRAITING, [raitingId,bank_id,raiting,prognoz,update_date,sertifikat]);
     } catch (error) {
         console.log(error);
     }

@@ -360,13 +360,19 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
-    "url": "http://localhost:8000/renkingi",
+    "url": "http://localhost:8000/renkingi?kvartal=VI",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-01-26T09:03:56.418Z",
+    "modified": "2023-02-06T12:01:35.251Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "kvartal",
+        "value": "VI",
+        "isPath": false
+      }
+    ],
     "body": {
       "type": "json",
       "raw": "{\n  \"category_name\":\"til1\",\n  \"title_uz\":\"title uzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"link\":\"https://nimadir\",\n  \"data_date\":\"25.01.23\",\n  \"inn\": \"dfgh\",\n  \"ogrn\": \"dfgh\",\n  \"kpp\": \"fghj\",\n  \"country\":\"sdfghj\"\n}",
@@ -809,16 +815,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/raiting",
-    "url": "https://apifake.supersiteuz.com/raiting/1",
-    "method": "PUT",
+    "url": "http://localhost:8000/raiting",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-01-26T08:22:47.441Z",
-    "modified": "2023-01-27T14:11:38.071Z",
+    "modified": "2023-02-06T12:15:34.493Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bank_id\":4,\n  \"raiting\":\"dfghjsdfgbhnjm,\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\"\n}",
+      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghjsdfgbhnjm,\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\",\n  \"sertifikat\":\"dfghjk\"\n}",
       "form": []
     },
     "tests": []
@@ -828,16 +834,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/about",
-    "url": "http://localhost:8000/about/1",
-    "method": "PUT",
+    "url": "http://localhost:8000/about",
+    "method": "GET",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-01-30T14:34:42.823Z",
+    "modified": "2023-02-06T11:51:06.548Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"dfghjk\",\n  \"atribut\":\"dfghj\",\n  \"god\":\"2023\",\n  \"sum\":\"ghjk\"\n}",
+      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"VI\",\n  \"atribut\":\"new\",\n  \"god\":\"2021\",\n  \"sum\":\"ghjk\"\n}",
       "form": []
     },
     "tests": []

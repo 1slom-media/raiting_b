@@ -9,10 +9,10 @@ const GETRAITING = `
 const POSTRAITING =`
 insert into
     raiting(
-        bank_id,raiting,prognoz,update_date
+        bank_id,raiting,prognoz,update_date,sertifikat
     )
 values
-    ($1,$2,$3,$4) returning *
+    ($1,$2,$3,$4,$5) returning *
 `;
 
 const PUTRAITING= `
@@ -22,7 +22,8 @@ const PUTRAITING= `
             bank_id,
             raiting,
             prognoz,
-            update_date
+            update_date,
+            sertifikat
         from raiting
         where id = $1    
     ) update raiting as r
@@ -46,6 +47,11 @@ const PUTRAITING= `
                 case 
                     when length($5) > 1 then $5
                     else o.update_date
+                end,
+        sertifikat = 
+                case 
+                    when length($6) > 1 then $6
+                    else o.sertifikat
                 end
     from old_raiting as o   
     where r.id = $1

@@ -21,17 +21,17 @@ const GET = async ({bankId=0},{search}) => {
     }
 };
 
-const POST = async ({category_id,companyname,inn,ogrn,kpp,country,images}) => {
+const POST = async ({category_id,companyname,inn,ogrn,kpp,country}) => {
     try {
-      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country,images]);
+      return await fetch(POSTBANKS, [category_id,companyname,inn,ogrn,kpp,country]);
     } catch (error) {
         console.log(error);
     } 
 }; 
 
-const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country,images}) => {
+const PUT = async ({bankId},{ category_id,companyname,inn,ogrn,kpp,country}) => {
     try {
-      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country,images]);
+      return await fetch(PUTBANKS, [bankId,category_id,companyname,inn,ogrn,kpp,country]);
     } catch (error) {
         console.log(error); 
     }

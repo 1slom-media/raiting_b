@@ -4,7 +4,10 @@ const GETRENK = `
         json_agg(a.*) as about_renking
     from renkingi as r
     left join about_renking as a on a.renking_id = r.id
-    where case when $1 > 0 then r.id = $1 else true end
+    where case when $1 > 0 then r.id = $1 else true end and
+    case when length($2) > 1 then  a.kvartal=$2 else true end and
+    case when length($3) > 1 then  a.atribut=$3 else true end and
+    case when length($4) > 1 then  a.god=$4 else true end
     group by r.id
     order by r.id
 `;

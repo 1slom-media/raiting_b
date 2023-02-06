@@ -7,9 +7,9 @@ import {
     DELETERENK
 } from "./query.js";
 
-const GET = async ({renkId=0}) => {
+const GET = async ({renkId=0},{kvartal,atribut,years}) => {
     try {
-        const renkingi = await fetchAll(GETRENK, [renkId])
+        const renkingi = await fetchAll(GETRENK, [renkId,kvartal,atribut,years])
         return renkingi?.map(renking => {
             renking.about_renking = renking.about_renking[0] == null ? [] : renking.about_renking
             return renking

@@ -163,7 +163,7 @@ ALTER TABLE banks
 DROP COLUMN update_date;
 
 ALTER TABLE banks
-ADD COLUMN images text;
+DROP COLUMN images;
 
 CREATE TABLE IF NOT EXISTS raiting(
     id serial primary key,
@@ -173,6 +173,9 @@ CREATE TABLE IF NOT EXISTS raiting(
     update_date varchar(100) not null,
     date timestamp default current_timestamp
 );
+
+ALTER TABLE raiting
+ADD COLUMN sertifikat text;
 
 
 
