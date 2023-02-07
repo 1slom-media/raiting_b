@@ -360,21 +360,21 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
-    "url": "http://localhost:8000/renkingi?year1=2020&year2=2023",
+    "url": "http://localhost:8000/renkingi?kvartal1=1&kvartal2=3",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-02-07T11:19:42.310Z",
+    "modified": "2023-02-07T11:20:06.894Z",
     "headers": [],
     "params": [
       {
-        "name": "year1",
-        "value": "2020",
+        "name": "kvartal1",
+        "value": "1",
         "isPath": false
       },
       {
-        "name": "year2",
-        "value": "2023",
+        "name": "kvartal2",
+        "value": "3",
         "isPath": false
       }
     ],
@@ -820,16 +820,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/raiting",
-    "url": "http://localhost:8000/raiting",
-    "method": "POST",
+    "url": "http://localhost:8000/raiting/10",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2023-01-26T08:22:47.441Z",
-    "modified": "2023-02-06T12:15:34.493Z",
+    "modified": "2023-02-07T12:07:38.588Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghjsdfgbhnjm,\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\",\n  \"sertifikat\":\"dfghjk\"\n}",
+      "raw": "{\n  \"bank_id\":1,\n  \"raiting\":\"dfghjsdfgbhnjm,\",\n  \"prognoz\":\"dfghjk\",\n  \"update_date\":\"202323456789\",\n  \"sertifikat\":\"dfghjk\",\n  \"type_reting\":\"ghjvgbhnm\"\n}",
       "form": []
     },
     "tests": []

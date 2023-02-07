@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS raiting(
 );
 
 ALTER TABLE raiting
-ADD COLUMN sertifikat text;
+ADD COLUMN type_reting varchar;
 
 
 
