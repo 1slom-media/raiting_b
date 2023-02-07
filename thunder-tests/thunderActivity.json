@@ -360,16 +360,21 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
-    "url": "http://localhost:8000/renkingi?kvartal=VI",
+    "url": "http://localhost:8000/renkingi?year1=2020&year2=2023",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-02-06T12:01:35.251Z",
+    "modified": "2023-02-07T11:19:42.310Z",
     "headers": [],
     "params": [
       {
-        "name": "kvartal",
-        "value": "VI",
+        "name": "year1",
+        "value": "2020",
+        "isPath": false
+      },
+      {
+        "name": "year2",
+        "value": "2023",
         "isPath": false
       }
     ],
@@ -835,15 +840,15 @@
     "containerId": "",
     "name": "http://localhost:8000/about",
     "url": "http://localhost:8000/about",
-    "method": "GET",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-02-06T11:51:06.548Z",
+    "modified": "2023-02-07T10:34:44.469Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"VI\",\n  \"atribut\":\"new\",\n  \"god\":\"2021\",\n  \"sum\":\"ghjk\"\n}",
+      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"4\",\n  \"atribut\":\"new\",\n  \"god\":\"2019\",\n  \"sum\":\"ghjk\"\n}",
       "form": []
     },
     "tests": []
