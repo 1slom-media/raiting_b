@@ -1,26 +1,10 @@
 import { fetch, fetchAll } from "../../lib/postgres.js";
 
-import { GETYEAR, POSTRENK, PUTRENK, DELETERENK,GETRENKING,GETKVARTAL } from "./query.js";
+import { POSTRENK, PUTRENK, DELETERENK,GETRENKING} from "./query.js";
 
 const GET = async ({ renkId = 0 }, { atribut, year1, year2,kvartal1,kvartal2 }) => {
   try {
-    if(year1>=0 && year2>=0){
-      const renkingi = await fetchAll(GETYEAR, [renkId,atribut,year1,year2]);
-      return renkingi?.map((renking) => {
-        renking.about_renking =
-          renking.about_renking[0] == null ? [] : renking.about_renking;
-        return renking;
-      });
-    }
-    if(kvartal1>=0 && kvartal2>=0){
-      const renkingi = await fetchAll(GETKVARTAL, [renkId,atribut,kvartal1,kvartal2]);
-      return renkingi?.map((renking) => {
-        renking.about_renking =
-          renking.about_renking[0] == null ? [] : renking.about_renking;
-        return renking;
-      });
-    }
-    const renkingi = await fetchAll(GETRENKING, [renkId,atribut]);
+    const renkingi = await fetchAll(GETRENKING, [renkId,atribut,year1,year2,kvartal1,kvartal2]);
     return renkingi?.map((renking) => {
       renking.about_renking =
         renking.about_renking[0] == null ? [] : renking.about_renking;

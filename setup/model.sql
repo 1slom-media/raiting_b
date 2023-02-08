@@ -171,7 +171,7 @@ CREATE TABLE IF NOT EXISTS raiting(
     raiting varchar(100) not null,
     prognoz varchar (300) not null,
     update_date varchar(100) not null,
-    date timestamp default current_timestamp
+    date timestamp default current_timestamp 
 );
 
 ALTER TABLE raiting

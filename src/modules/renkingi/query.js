@@ -1,29 +1,3 @@
-const GETYEAR = `
-    select
-        r.*,
-        json_agg(a.*) as about_renking
-    from renkingi as r
-    left join about_renking as a on a.renking_id = r.id
-    where case when $1 > 0 then r.id = $1 else true end and
-    case when length($2) > 1 then  a.atribut=$2 else true end and
-    a.god BETWEEN $3 AND $4
-    group by r.id
-    order by r.id
-`;
-
-const GETKVARTAL = `
-    select
-        r.*,
-        json_agg(a.*) as about_renking
-    from renkingi as r
-    left join about_renking as a on a.renking_id = r.id
-    where case when $1 > 0 then r.id = $1 else true end and
-    case when length($2) > 1 then  a.atribut=$2 else true end and
-    a.kvartal BETWEEN $3 AND $4
-    group by r.id
-    order by r.id
-`;
-
 const GETRENKING=`
     select
     r.*,
@@ -31,7 +5,9 @@ const GETRENKING=`
     from renkingi as r
     left join about_renking as a on a.renking_id = r.id
     where case when $1 > 0 then r.id = $1 else true end and
-    case when length($2) > 1 then  a.atribut=$2 else true end
+    case when length($2) > 1 then  a.atribut=$2 else true end and
+    case when length($3) > 1 and length($4) > 1 then  a.god in ($3,$4) else true end and
+    case when length($5) > 0 and length($6) > 0 then  a.kvartal in ($5,$6) else true end
     group by r.id
     order by r.id
 `
@@ -119,10 +95,8 @@ where id=$1 returning *
 `;
 
 export{
-    GETYEAR,
     POSTRENK,
     PUTRENK,
     DELETERENK,
     GETRENKING,
-    GETKVARTAL
 }
