@@ -360,27 +360,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
-    "url": "http://localhost:8000/renkingi?kvartal1=1&kvartal2=VI",
+    "url": "http://localhost:8000/renkingi",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-02-08T17:16:49.479Z",
+    "modified": "2023-02-14T10:38:23.475Z",
     "headers": [],
-    "params": [
-      {
-        "name": "kvartal1",
-        "value": "1",
-        "isPath": false
-      },
-      {
-        "name": "kvartal2",
-        "value": "VI",
-        "isPath": false
-      }
-    ],
+    "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"category_name\":\"til1\",\n  \"title_uz\":\"title uzuzuzuzuzuzuzuz\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"link\":\"https://nimadir\",\n  \"data_date\":\"25.01.23\",\n  \"inn\": \"dfgh\",\n  \"ogrn\": \"dfgh\",\n  \"kpp\": \"fghj\",\n  \"country\":\"sdfghj\"\n}",
+      "raw": "{\n  \"category_name\":\"til1\",\n  \"title_uz\":\"alik\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"data_date\":\"25.01.23\",\n  \"inn\": \"dfgh\",\n  \"ogrn\": \"dfgh\",\n  \"kpp\": \"fghj\",\n  \"country\":\"sdfghj\"\n}",
       "form": []
     },
     "tests": []
@@ -839,16 +828,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/about",
-    "url": "http://localhost:8000/about",
-    "method": "POST",
+    "url": "http://localhost:8000/about/2",
+    "method": "PUT",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-02-07T10:34:44.469Z",
+    "modified": "2023-02-14T10:10:43.086Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"renking_id\":4,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"4\",\n  \"atribut\":\"new\",\n  \"god\":\"2019\",\n  \"sum\":\"ghjk\"\n}",
+      "raw": "{\n  \"renking_id\":3,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"4\",\n  \"atribut\":\"new\",\n  \"god\":\"2019\",\n  \"sum\":\"ghjk\",\n  \"ranges\":1\n}",
       "form": []
     },
     "tests": []

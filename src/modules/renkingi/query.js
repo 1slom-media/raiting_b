@@ -9,7 +9,7 @@ const GETRENKING=`
     case when length($3) > 1 and length($4) > 1 then  a.god in ($3,$4) else true end and
     case when length($5) > 0 and length($6) > 0 then  a.kvartal in ($5,$6) else true end
     group by r.id
-    order by r.id
+    order by r.title_uz
 `
 
 const POSTRENK =`

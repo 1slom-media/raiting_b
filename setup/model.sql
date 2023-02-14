@@ -68,8 +68,11 @@ CREATE TABLE IF NOT EXISTS renkingi(
     title_uz varchar not null,
     title_en varchar not null,
     title_ru varchar not null,
-    pdf text not null,
-    size varchar(50) not null,
+    data_date varchar(100),
+    inn varchar(200),
+    ogrn varchar(80),
+    kpp varchar(100),
+    country varchar(60),
     date timestamp default current_timestamp
 );
 
@@ -85,7 +88,7 @@ ADD COLUMN inn varchar(200);
 ALTER TABLE renkingi
 ADD COLUMN ogrn varchar(80);
 ALTER TABLE renkingi
-ADD COLUMN kpp varchar(100) ;
+ADD COLUMN kpp varchar(100);
 ALTER TABLE renkingi
 ADD COLUMN country varchar(60);
 
@@ -103,8 +106,12 @@ CREATE TABLE IF NOT EXISTS about_renking(
     atribut varchar(100) not null,
     god varchar(100) not null,
     sum varchar(100) not null,
+    ranges int,
     date timestamp default current_timestamp
 );
+
+ALTER TABLE about_renking
+ADD COLUMN ranges int;
 
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,

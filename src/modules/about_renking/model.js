@@ -15,17 +15,17 @@ const GET = async ({aboutId=0}) => {
     }
 };
 
-const POST = async ({renking_id,raiting,kvartal,atribut,god,sum}) => {
+const POST = async ({renking_id,raiting,kvartal,atribut,god,sum,ranges}) => {
     try {
-      return await fetch(POSTABOUT, [ renking_id,raiting,kvartal,atribut,god,sum]);
+      return await fetch(POSTABOUT, [ renking_id,raiting,kvartal,atribut,god,sum,ranges]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({aboutId},{renking_id,raiting,kvartal,atribut,god,sum}) => {
+const PUT = async ({aboutId},{renking_id,raiting,kvartal,atribut,god,sum,ranges}) => {
     try {
-      return await fetch(PUTABOUT, [aboutId,renking_id,raiting,kvartal,atribut,god,sum]);
+      return await fetch(PUTABOUT, [aboutId,renking_id,raiting,kvartal,atribut,god,sum,ranges]);
     } catch (error) {
         console.log(error);
     }
