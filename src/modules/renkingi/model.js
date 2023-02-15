@@ -26,6 +26,8 @@ const POST = async ({
   ogrn,
   kpp,
   country,
+  category_name_en,
+  category_name_ru
 }) => {
   try {
     return await fetch(POSTRENK, [
@@ -38,6 +40,8 @@ const POST = async ({
       ogrn,
       kpp,
       country,
+      category_name_en,
+      category_name_ru
     ]);
   } catch (error) {
     console.log(error);
@@ -56,6 +60,8 @@ const PUT = async (
     ogrn,
     kpp,
     country,
+    category_name_en,
+    category_name_ru
   }
 ) => {
   try {
@@ -70,6 +76,8 @@ const PUT = async (
       ogrn,
       kpp,
       country,
+      category_name_en,
+      category_name_ru
     ]);
   } catch (error) {
     console.log(error);

@@ -9,10 +9,10 @@ const GETABOUT = `
 const POSTABOUT =`
 insert into
     about_renking(
-        renking_id,raiting,kvartal,atribut,god,sum,ranges
+        renking_id,raiting,kvartal,atribut,god,sum,ranges,atribut_en,atribut_ru
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *
 `;
 
 const PUTABOUT= `
@@ -25,7 +25,9 @@ const PUTABOUT= `
             atribut,
             god,
             sum,
-            ranges
+            ranges,
+            atribut_en,
+            atribut_ru
         from about_renking
         where id = $1    
     ) update about_renking as a
@@ -64,6 +66,16 @@ const PUTABOUT= `
                 case 
                     when $8 > 0 then $8
                     else o.ranges
+                end,
+        atribut_en = 
+                case 
+                    when length($9) > 1 then $9
+                    else o.atribut_en
+                end,
+        atribut_ru = 
+                case 
+                    when length($10) > 1 then $10
+                    else o.atribut_ru
                 end
     from old_about_renking as o   
     where a.id = $1

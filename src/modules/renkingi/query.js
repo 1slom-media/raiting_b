@@ -5,7 +5,7 @@ const GETRENKING=`
     from renkingi as r
     left join about_renking as a on a.renking_id = r.id
     where case when $1 > 0 then r.id = $1 else true end and
-    case when length($2) > 1 then  a.atribut=$2 else true end and
+    case when length($2) > 1 then  a.atribut=$2 or a.atribut_en=$2 or a.atribut_ru=$2 else true end and
     case when length($3) > 1 and length($4) > 1 then  a.god in ($3,$4) else true end and
     case when length($5) > 0 and length($6) > 0 then  a.kvartal in ($5,$6) else true end
     group by r.id
@@ -15,10 +15,11 @@ const GETRENKING=`
 const POSTRENK =`
 insert into
     renkingi(
-        category_name,title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country
+        category_name,title_uz,title_en,title_ru,data_date,inn,ogrn,kpp,country, category_name_en,
+        category_name_ru
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) returning *
 `;
 
 const PUTRENK= `
@@ -33,7 +34,9 @@ const PUTRENK= `
             inn,
             ogrn,
             kpp,
-            country
+            country,
+            category_name_en,
+            category_name_ru
         from renkingi
         where id = $1    
     ) update renkingi as r
@@ -82,6 +85,16 @@ const PUTRENK= `
                 case 
                     when length($10) > 1 then $10
                     else o.country
+                end,
+        category_name_en = 
+                case 
+                    when length($11) > 1 then $11
+                    else o.category_name_en
+                end,
+        category_name_ru = 
+                case 
+                    when length($12) > 1 then $12
+                    else o.category_name_ru
                 end
     from old_renkingi as o   
     where r.id = $1

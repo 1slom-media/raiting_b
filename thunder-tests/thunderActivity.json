@@ -360,13 +360,19 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/renkingi",
-    "url": "http://localhost:8000/renkingi",
+    "url": "http://localhost:8000/renkingi?atribut=boshqa",
     "method": "GET",
     "sortNum": 0,
     "created": "2023-01-14T15:44:29.012Z",
-    "modified": "2023-02-14T10:38:23.475Z",
+    "modified": "2023-02-15T08:53:18.627Z",
     "headers": [],
-    "params": [],
+    "params": [
+      {
+        "name": "atribut",
+        "value": "boshqa",
+        "isPath": false
+      }
+    ],
     "body": {
       "type": "json",
       "raw": "{\n  \"category_name\":\"til1\",\n  \"title_uz\":\"alik\",\n  \"title_en\":\"title uz\",\n  \"title_ru\":\"title ru\",\n  \"data_date\":\"25.01.23\",\n  \"inn\": \"dfgh\",\n  \"ogrn\": \"dfgh\",\n  \"kpp\": \"fghj\",\n  \"country\":\"sdfghj\"\n}",
@@ -828,16 +834,16 @@
     "colId": "history",
     "containerId": "",
     "name": "http://localhost:8000/about",
-    "url": "http://localhost:8000/about/2",
-    "method": "PUT",
+    "url": "http://localhost:8000/about",
+    "method": "POST",
     "sortNum": 0,
     "created": "2023-01-26T09:03:25.275Z",
-    "modified": "2023-02-14T10:10:43.086Z",
+    "modified": "2023-02-15T08:52:30.536Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"renking_id\":3,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"4\",\n  \"atribut\":\"new\",\n  \"god\":\"2019\",\n  \"sum\":\"ghjk\",\n  \"ranges\":1\n}",
+      "raw": "{\n  \"renking_id\":1,\n  \"raiting\":\"dfghjkdfghjkl;\",\n  \"kvartal\":\"4\",\n  \"atribut\":\"new\",\n  \"god\":\"2019\",\n  \"sum\":\"ghjk\",\n  \"ranges\":1,\n   \"atribut_en\": \"boshqa\",\n  \"atribut_ru\": \"Активы\"\n}",
       "form": []
     },
     "tests": []

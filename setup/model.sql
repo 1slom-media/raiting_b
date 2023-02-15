@@ -84,7 +84,9 @@ ALTER TABLE renkingi
 DROP COLUMN link;
 
 ALTER TABLE renkingi
-ADD COLUMN inn varchar(200);
+ADD COLUMN category_name_en varchar(200);
+ALTER TABLE renkingi
+ADD COLUMN category_name_ru varchar(200);
 ALTER TABLE renkingi
 ADD COLUMN ogrn varchar(80);
 ALTER TABLE renkingi
@@ -111,7 +113,9 @@ CREATE TABLE IF NOT EXISTS about_renking(
 );
 
 ALTER TABLE about_renking
-ADD COLUMN ranges int;
+ADD COLUMN atribut_en varchar(100);
+ALTER TABLE about_renking
+ADD COLUMN atribut_ru varchar(100);
 
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,
