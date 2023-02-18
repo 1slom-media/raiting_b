@@ -117,6 +117,9 @@ ADD COLUMN atribut_en varchar(100);
 ALTER TABLE about_renking
 ADD COLUMN atribut_ru varchar(100);
 
+
+
+
 CREATE TABLE IF NOT EXISTS presscenter(
     id serial primary key,
     description_uz text not null,
