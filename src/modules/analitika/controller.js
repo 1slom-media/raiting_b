@@ -2,7 +2,7 @@ import model from "./model.js";
 
 const GET = async (req, res) => {
     try {
-      const analitika = await model.GET(req.params);
+      const analitika = await model.GET(req.params,req.query);
       res.send(analitika);
     } catch (error) {
       console.error(error);

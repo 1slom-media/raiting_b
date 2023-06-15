@@ -6,16 +6,16 @@ const GETRAITING = `
     order by r.id
 `;
 
-const POSTRAITING =`
+const POSTRAITING = `
 insert into
     raiting(
-        bank_id,raiting,prognoz,update_date,sertifikat,type_reting
+        bank_id,raiting,prognoz,update_date,sertifikat,type_reting,link
     )
 values
-    ($1,$2,$3,$4,$5,$6) returning *
+    ($1,$2,$3,$4,$5,$6,$7) returning *
 `;
 
-const PUTRAITING= `
+const PUTRAITING = `
     with old_raiting as (
         select
             id,
@@ -24,7 +24,8 @@ const PUTRAITING= `
             prognoz,
             update_date,
             sertifikat,
-            type_reting
+            type_reting,
+            link
         from raiting
         where id = $1    
     ) update raiting as r
@@ -58,21 +59,20 @@ const PUTRAITING= `
                 case 
                     when length($7) > 1 then $7
                     else o.type_reting
+                end,
+                link = 
+                case 
+                    when length($8) > 1 then $8
+                    else o.link
                 end
     from old_raiting as o   
     where r.id = $1
     returning r.*                 
 `;
 
-
 const DELETERAITING = `
 delete from raiting
 where id=$1 returning *
 `;
 
-export{
-    GETRAITING,
-    POSTRAITING,
-    PUTRAITING,
-    DELETERAITING
-}
+export { GETRAITING, POSTRAITING, PUTRAITING, DELETERAITING };

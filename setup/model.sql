@@ -191,5 +191,24 @@ CREATE TABLE IF NOT EXISTS raiting(
 ALTER TABLE raiting
 ADD COLUMN type_reting varchar;
 
+ALTER TABLE raiting
+ADD COLUMN link text;
+
+ALTER TABLE presscenter
+ADD COLUMN press_center_pdf text;
+
+ALTER TABLE analitika
+ADD COLUMN analitka_pdf text;
+
+CREATE TABLE IF NOT EXISTS forma(
+    id serial primary key,
+    name varchar(200) not null,
+    name_organisation varchar (300) not null,
+    phone_number  varchar(20) not null,
+    email varchar(100) not null,
+    comment text not null,
+    date timestamp default current_timestamp 
+);
+
 
 

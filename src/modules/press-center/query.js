@@ -9,10 +9,10 @@ const GETPRESS = `
 const POSTPRESS =`
 insert into
     presscenter(
-        description_uz,description_en,description_ru,data_date
+        description_uz,description_en,description_ru,data_date,press_center_pdf
     )
 values
-    ($1,$2,$3,$4) returning *
+    ($1,$2,$3,$4,$5) returning *
 `;
 
 const PUTPRESS= `
@@ -22,7 +22,8 @@ const PUTPRESS= `
             description_uz,
             description_en,
             description_ru,
-            data_date
+            data_date,
+            press_center_pdf
         from presscenter
         where id = $1    
     ) update presscenter as p
@@ -46,6 +47,11 @@ const PUTPRESS= `
                 case 
                     when length($5) > 1 then $5
                     else o.data_date
+                end,
+                press_center_pdf = 
+                case 
+                    when length($6) > 1 then $6
+                    else o.press_center_pdf
                 end
     from old_presscenter as o   
     where p.id = $1

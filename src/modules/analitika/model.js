@@ -7,25 +7,25 @@ import {
     DELETEANALITIKA
 } from "./query.js";
 
-const GET = async ({analitikaId=0}) => {
+const GET = async ({analitikaId=0},{search}) => {
     try {
-        return await fetchAll(GETANALITIKA, [analitikaId])
+        return await fetchAll(GETANALITIKA, [analitikaId,search])
     } catch (error) {
         console.log(error);
     }
 };
 
-const POST = async ({category_name, title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
+const POST = async ({category_name, title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf}) => {
     try {
-      return await fetch(POSTANALITIKA, [ category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
+      return await fetch(POSTANALITIKA, [ category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({analitikaId},{category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date}) => {
+const PUT = async ({analitikaId},{category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf}) => {
     try {
-      return await fetch(PUTANALITIKA, [analitikaId,category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date]);
+      return await fetch(PUTANALITIKA, [analitikaId,category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf]);
     } catch (error) {
         console.log(error);
     }

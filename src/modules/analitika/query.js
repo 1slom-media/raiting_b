@@ -2,20 +2,20 @@ const GETANALITIKA = `
     select
         a.*
     from analitika as a
-    where case when $1 > 0 then a.id = $1 else true end
+    where (title_uz ilike concat('%', $2::varchar, '%')) or (title_ru ilike concat('%', $2::varchar, '%')) or (title_en ilike concat('%', $2::varchar, '%'))  and case when $1 > 0 then a.id = $1 else true end
     order by a.id
 `;
 
-const POSTANALITIKA =`
+const POSTANALITIKA = `
 insert into
     analitika(
-        category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date
+        category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7,$8,$9) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning *
 `;
 
-const PUTANALITIKA= `
+const PUTANALITIKA = `
     with old_analitika as (
         select
             id,
@@ -27,7 +27,8 @@ const PUTANALITIKA= `
             description_en,
             description_ru,
             img,
-            data_date
+            data_date,
+            analitka_pdf
         from analitika
         where id = $1    
     ) update analitika as a
@@ -66,7 +67,7 @@ const PUTANALITIKA= `
                 case 
                     when length($8) > 1 then $8
                     else o.description_ru
-                end,
+                 end,
         img = 
                 case 
                     when length($9) > 1 then $9
@@ -76,21 +77,20 @@ const PUTANALITIKA= `
                 case 
                     when length($10) > 1 then $10
                     else o.data_date
+                end,
+        analitka_pdf = 
+                case 
+                    when length($11) > 1 then $11
+                    else o.analitka_pdf
                 end
     from old_analitika as o   
     where a.id = $1
     returning a.*                 
 `;
 
-
 const DELETEANALITIKA = `
 delete from analitika
 where id=$1 returning *
 `;
 
-export{
-    GETANALITIKA,
-    POSTANALITIKA,
-    PUTANALITIKA,
-    DELETEANALITIKA
-}
+export { GETANALITIKA, POSTANALITIKA, PUTANALITIKA, DELETEANALITIKA };
