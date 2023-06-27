@@ -68,7 +68,7 @@ const PUTRAITING = `
                 end,
                 update_date_pdf = 
                 case 
-                    when length($8) > 1 then $8
+                    when length($9) > 1 then $9
                     else o.update_date_pdf
                 end
     from old_raiting as o   
