@@ -190,6 +190,8 @@ CREATE TABLE IF NOT EXISTS raiting(
 
 ALTER TABLE raiting
 ADD COLUMN type_reting varchar;
+ALTER TABLE raiting
+ADD COLUMN update_date_pdf varchar;
 
 ALTER TABLE raiting
 ADD COLUMN link text;
