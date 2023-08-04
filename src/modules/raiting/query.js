@@ -3,16 +3,16 @@ const GETRAITING = `
         r.*
     from raiting as r
     where case when $1 > 0 then r.id = $1 else true end
-    order by r.id
+    order by r.id DESC
 `;
 
 const POSTRAITING = `
 insert into
     raiting(
-        bank_id,raiting,prognoz,update_date,sertifikat,type_reting,link,update_date_pdf
+        bank_id,raiting,prognoz,update_date,sertifikat,type_reting,link,update_date_pdf,type_reting_uz,type_reting_en,prognoz_uz,prognoz_en
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7,$8) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) returning *
 `;
 
 const PUTRAITING = `
@@ -26,7 +26,11 @@ const PUTRAITING = `
             sertifikat,
             type_reting,
             link,
-            update_date_pdf
+            update_date_pdf,
+            type_reting_uz,
+            type_reting_en,
+            prognoz_uz,
+            prognoz_en
         from raiting
         where id = $1    
     ) update raiting as r
@@ -70,6 +74,26 @@ const PUTRAITING = `
                 case 
                     when length($9) > 1 then $9
                     else o.update_date_pdf
+                end,
+                type_reting_uz = 
+                case 
+                    when length($10) > 1 then $10
+                    else o.type_reting_uz
+                end,
+                type_reting_en = 
+                case 
+                    when length($11) > 1 then $11
+                    else o.type_reting_en
+                end,
+                prognoz_uz = 
+                case 
+                    when length($12) > 1 then $12
+                    else o.prognoz_uz
+                end,
+                prognoz_en = 
+                case 
+                    when length($13) > 1 then $13
+                    else o.prognoz_en
                 end
     from old_raiting as o   
     where r.id = $1

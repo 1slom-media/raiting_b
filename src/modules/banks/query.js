@@ -1,17 +1,19 @@
 const GETBANKS = `
-    select
+    SELECT
         b.*,
-        json_agg(r.*) as raiting
-    from banks as b
-    left join raiting as r on r.bank_id = b.bank_id
-    where (companyname ilike concat('%', $2::varchar, '%')) and case when $1 > 0 then b.bank_id = $1 else true end
-    group by b.bank_id
-    order by b.bank_id 
+        json_agg(r.*) AS raiting
+    FROM banks AS b
+    LEFT JOIN raiting AS r ON r.bank_id = b.bank_id
+    WHERE (companyname ILIKE CONCAT('%', $2::varchar, '%')) AND CASE WHEN $1 > 0 THEN b.bank_id = $1 ELSE TRUE END
+    GROUP BY b.bank_id, b.updated_at, r.updated_at
+    ORDER BY GREATEST(b.updated_at, COALESCE(r.updated_at, '2000-01-01')) DESC;
 `;
 
+
 const POSTBANKS =`
-insert into banks (category_id,companyname,inn,ogrn,kpp,country)
-values ($1,$2,$3,$4,$5,$6) returning *
+insert into banks (category_id,companyname,inn,ogrn,kpp,country,country_uz,
+    country_en)
+values ($1,$2,$3,$4,$5,$6,$7,$8) returning *
 `;
 
 
@@ -24,7 +26,9 @@ const PUTBANKS = `
             inn,
             ogrn,
             kpp,
-            country
+            country,
+            country_uz,
+            country_en
         from banks
         where bank_id = $1    
     ) update banks as b
@@ -58,6 +62,16 @@ const PUTBANKS = `
                 case 
                     when length($7) > 1 then $7
                     else o.country
+                end,
+                country_uz = 
+                case 
+                    when length($8) > 1 then $8
+                    else o.country_uz
+                end,
+                country_en = 
+                case 
+                    when length($9) > 1 then $9
+                    else o.country_en
                 end
     from old_banks as o   
     where b.bank_id = $1

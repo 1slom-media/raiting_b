@@ -15,17 +15,17 @@ const GET = async ({pressId=0}) => {
     }
 };
 
-const POST = async ({description_uz,description_en,description_ru,data_date,press_center_pdf}) => {
+const POST = async ({description_uz,description_en,description_ru,data_date,press_center_pdf,title_uz,title_en,title_ru}) => {
     try {
-      return await fetch(POSTPRESS, [ description_uz,description_en,description_ru,data_date,press_center_pdf]);
+      return await fetch(POSTPRESS, [ description_uz,description_en,description_ru,data_date,press_center_pdf,title_uz,title_en,title_ru]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({pressId},{description_uz,description_en,description_ru,data_date,press_center_pdf}) => {
+const PUT = async ({pressId},{description_uz,description_en,description_ru,data_date,press_center_pdf,title_uz,title_en,title_ru}) => {
     try {
-      return await fetch(PUTPRESS, [pressId,description_uz,description_en,description_ru,data_date,press_center_pdf]);
+      return await fetch(PUTPRESS, [pressId,description_uz,description_en,description_ru,data_date,press_center_pdf,title_uz,title_en,title_ru]);
     } catch (error) {
         console.log(error);
     }

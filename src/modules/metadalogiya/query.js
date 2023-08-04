@@ -3,7 +3,7 @@ const GETMETA = `
         m.*
     from metadalogia as m
     where case when $1 > 0 then m.id = $1 else true end
-    order by m.id
+    order by m.id DESC
 `;
 
 const POSTMETA =`

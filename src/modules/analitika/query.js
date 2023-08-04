@@ -3,7 +3,7 @@ const GETANALITIKA = `
         a.*
     from analitika as a
     where (title_uz ilike concat('%', $2::varchar, '%')) or (title_ru ilike concat('%', $2::varchar, '%')) or (title_en ilike concat('%', $2::varchar, '%'))  and case when $1 > 0 then a.id = $1 else true end
-    order by a.id
+    order by a.id DESC
 `;
 
 const POSTANALITIKA = `
