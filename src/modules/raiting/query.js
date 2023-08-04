@@ -3,7 +3,7 @@ const GETRAITING = `
         r.*
     from raiting as r
     where case when $1 > 0 then r.id = $1 else true end
-    order by r.id DESC
+    order by r.update_date DESC
 `;
 
 const POSTRAITING = `

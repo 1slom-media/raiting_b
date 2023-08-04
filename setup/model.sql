@@ -184,6 +184,10 @@ CREATE TABLE IF NOT EXISTS banks(
     ogrn varchar(80) not null,
     kpp varchar(100) not null,
     country varchar(60) not null,
+    country_uz varchar,
+    country_en varchar,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
     date timestamp default current_timestamp
 );
 
@@ -220,6 +224,14 @@ CREATE TABLE IF NOT EXISTS raiting(
     raiting varchar(100) not null,
     prognoz varchar (300) not null,
     update_date varchar(100) not null,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    type_reting varchar,
+    type_reting_uz varchar,
+    type_reting_en varchar,
+    prognoz_uz varchar,
+    prognoz_en varchar,
+    link text,
     date timestamp default current_timestamp
 );
 
@@ -245,6 +257,8 @@ ALTER TABLE raiting
 ADD COLUMN prognoz_uz varchar;
 ALTER TABLE raiting
 ADD COLUMN prognoz_en varchar;
+ALTER TABLE raiting
+ADD COLUMN sertifikat text;
 
 ALTER TABLE raiting
 ADD COLUMN link text;

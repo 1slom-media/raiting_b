@@ -5,8 +5,8 @@ const GETBANKS = `
     FROM banks AS b
     LEFT JOIN raiting AS r ON r.bank_id = b.bank_id
     WHERE (companyname ILIKE CONCAT('%', $2::varchar, '%')) AND CASE WHEN $1 > 0 THEN b.bank_id = $1 ELSE TRUE END
-    GROUP BY b.bank_id, b.updated_at, r.updated_at
-    ORDER BY GREATEST(b.updated_at, COALESCE(r.updated_at, '2000-01-01')) DESC;
+    GROUP BY b.bank_id, prognoz
+    ORDER BY GREATEST(COALESCE(r.prognoz, '2000-01-01')) DESC;
 `;
 
 
