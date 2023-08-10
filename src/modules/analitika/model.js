@@ -15,17 +15,17 @@ const GET = async ({analitikaId=0},{search}) => {
     }
 };
 
-const POST = async ({category_name, title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf}) => {
+const POST = async ({category_name, title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf,status}) => {
     try {
-      return await fetch(POSTANALITIKA, [ category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf]);
+      return await fetch(POSTANALITIKA, [ category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf,status]);
     } catch (error) {
         console.log(error);
     }
 };
 
-const PUT = async ({analitikaId},{category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf}) => {
+const PUT = async ({analitikaId},{category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf,status}) => {
     try {
-      return await fetch(PUTANALITIKA, [analitikaId,category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf]);
+      return await fetch(PUTANALITIKA, [analitikaId,category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf,status]);
     } catch (error) {
         console.log(error);
     }

@@ -9,10 +9,10 @@ const GETANALITIKA = `
 const POSTANALITIKA = `
 insert into
     analitika(
-        category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf
+        category_name,title_uz,title_en,title_ru,description_uz,description_en,description_ru,img,data_date,analitka_pdf,status
     )
 values
-    ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) returning *
+    ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11) returning *
 `;
 
 const PUTANALITIKA = `
@@ -28,7 +28,8 @@ const PUTANALITIKA = `
             description_ru,
             img,
             data_date,
-            analitka_pdf
+            analitka_pdf,
+            status
         from analitika
         where id = $1    
     ) update analitika as a
@@ -82,6 +83,11 @@ const PUTANALITIKA = `
                 case 
                     when length($11) > 1 then $11
                     else o.analitka_pdf
+                end,
+        status = 
+                case 
+                    when length($12) > 1 then $12
+                    else o.status
                 end
     from old_analitika as o   
     where a.id = $1

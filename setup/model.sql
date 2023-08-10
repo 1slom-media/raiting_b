@@ -32,6 +32,9 @@ CREATE TABLE IF NOT EXISTS analitika(
 ALTER TABLE analitika
 ADD COLUMN analitka_pdf text;
 
+ALTER TABLE analitika
+ADD COLUMN status varchar;
+
 CREATE TABLE IF NOT EXISTS uslugiy(
     id serial primary key,
     title_uz varchar not null,
