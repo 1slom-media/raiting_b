@@ -35,7 +35,24 @@ const GET = async ({ bankId = 0 }, { search }) => {
 
 
 
-const POST = async ({ category_id, companyname, inn, ogrn, kpp, country,country_uz,country_en }) => {
+const POST = async ({
+  category_id,
+  companyname,
+  inn,
+  ogrn,
+  kpp,
+  country,
+  country_uz,
+  country_en,
+  phone,
+  insta_link,
+  tg_link,
+  web_link,
+  facebook_link,
+  adress_uz,
+  adress_en,
+  adress_ru
+}) => {
   try {
     return await fetch(POSTBANKS, [
       category_id,
@@ -45,16 +62,42 @@ const POST = async ({ category_id, companyname, inn, ogrn, kpp, country,country_
       kpp,
       country,
       country_uz,
-      country_en
+      country_en,
+      phone,
+      insta_link,
+      tg_link,
+      web_link,
+      facebook_link,
+      adress_uz,
+      adress_en,
+      adress_ru
     ]);
   } catch (error) {
     console.log(error);
   }
 };
 
+
 const PUT = async (
   { bankId },
-  { category_id, companyname, inn, ogrn, kpp, country,country_uz,country_en }
+  {
+    category_id,
+    companyname,
+    inn,
+    ogrn,
+    kpp,
+    country,
+    country_uz,
+    country_en,
+    phone,
+    insta_link,
+    tg_link,
+    web_link,
+    facebook_link,
+    adress_uz,
+    adress_en,
+    adress_ru
+  }
 ) => {
   try {
     return await fetch(PUTBANKS, [
@@ -66,12 +109,21 @@ const PUT = async (
       kpp,
       country,
       country_uz,
-      country_en
+      country_en,
+      phone,
+      insta_link,
+      tg_link,
+      web_link,
+      facebook_link,
+      adress_uz,
+      adress_en,
+      adress_ru
     ]);
   } catch (error) {
     console.log(error);
   }
 };
+
 
 const DELETE = async ({ bankId }) => {
   try {

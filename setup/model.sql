@@ -220,6 +220,17 @@ ALTER TABLE
 ADD
     COLUMN updated_at TIMESTAMP DEFAULT NOW();
 
+ALTER TABLE banks
+ADD COLUMN phone varchar(50),
+ADD COLUMN insta_link varchar(300),
+ADD COLUMN tg_link varchar(300),
+ADD COLUMN web_link varchar(300),
+ADD COLUMN facebook_link varchar(300),
+ADD COLUMN adress_uz text,
+ADD COLUMN adress_en text,
+ADD COLUMN adress_ru text;
+
+
 
 CREATE TABLE IF NOT EXISTS raiting(
     id serial primary key,
