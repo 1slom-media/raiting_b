@@ -1,9 +1,29 @@
 const GETRAITING = `
     select
-        r.*
+        r.*,
+        json_build_object(
+            'bank_id', b.bank_id,
+            'companyname', b.companyname,
+            'inn', b.inn,
+            'ogrn', b.ogrn,
+            'kpp', b.kpp,
+            'country', b.country,
+            'parent', CASE 
+                WHEN p.bank_id IS NOT NULL THEN json_build_object(
+                    'companyname', p.companyname,
+                    'ogrn', p.ogrn,
+                    'kpp', p.kpp
+                )
+                ELSE NULL
+            END
+        ) as banks
     from raiting as r
+    left join banks as b on b.bank_id = r.bank_id
+    left join banks as p on p.bank_id = b.parent_id
     where case when $1 > 0 then r.id = $1 else true end
     order by r.update_date DESC
+    limit $2
+    offset $3
 `;
 
 const POSTRAITING = `

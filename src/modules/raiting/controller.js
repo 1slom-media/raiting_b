@@ -2,7 +2,11 @@ import model from "./model.js";
 
 const GET = async (req, res) => {
     try {
-      const raiting = await model.GET(req.params);
+      const raiting = await model.GET({
+        ...req.params,
+        page: req.query.page,
+        size: req.query.size
+      });
       res.send(raiting);
     } catch (error) {
       console.error(error);

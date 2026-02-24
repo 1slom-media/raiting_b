@@ -7,9 +7,13 @@ import {
     DELETERAITING
 } from "./query.js";
 
-const GET = async ({raitingId=0}) => {
+const GET = async ({raitingId=0, page, size}) => {
     try {
-        return await fetchAll(GETRAITING, [raitingId])
+        const pageNum = page ? parseInt(page) : 1;
+        const sizeNum = size ? parseInt(size) : null;
+        const offset = sizeNum && pageNum > 0 ? (pageNum - 1) * sizeNum : 0;
+        const limit = sizeNum || null;
+        return await fetchAll(GETRAITING, [raitingId, limit, offset])
     } catch (error) {
         console.log(error);
     }
