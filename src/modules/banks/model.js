@@ -14,7 +14,7 @@ const GET = async ({ bankId = 0 }, { search }) => {
       SELECT *
       FROM raiting
       WHERE bank_id = ANY($1)
-      ORDER BY id, updated_at DESC
+      ORDER BY update_date DESC
     `;
 
     const ratings = await fetchAll(getRatingsQuery, [bankIds]);
@@ -22,10 +22,20 @@ const GET = async ({ bankId = 0 }, { search }) => {
     const uniqueBanks = uniqBy(banks, 'bank_id');
     const uniqueRatings = uniqBy(ratings, 'id');
 
-    const banksWithRatings = uniqueBanks.map((bank) => ({
-      ...bank,
-      raiting: uniqueRatings.filter((rating) => rating.bank_id === bank.bank_id),
-    }));
+    const banksWithRatings = uniqueBanks.map((bank) => {
+      const bankRatings = uniqueRatings
+        .filter((rating) => rating.bank_id === bank.bank_id)
+        .sort((a, b) => {
+          const dateA = new Date(a.update_date);
+          const dateB = new Date(b.update_date);
+          return dateB - dateA; // DESC order
+        });
+      
+      return {
+        ...bank,
+        raiting: bankRatings,
+      };
+    });
 
     return banksWithRatings;
   } catch (error) {
